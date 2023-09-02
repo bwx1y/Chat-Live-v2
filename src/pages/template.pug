@@ -1,0 +1,20 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')  
+    link(rel='stylesheet', href='assets/style/main.css')   
+    title Chat live 
+  body
+    // navbar
+    header
+      nav.navbar.navbar-dark.bg-primary.fixed-top
+        .container-fluid
+          span.navbar-brand Chat live          
+          button.btn.btn-outline-secondary Login
+    // main
+    main.conatiner
+        block main
+    // script
+    script(type='module', src='assets/js/main.js')
+    script(type='module', src='assets/js/bootstrap.js')

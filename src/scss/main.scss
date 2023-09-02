@@ -1,0 +1,42 @@
+// import font family
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap");
+
+// custom font family
+$font-family-base: "Montserrat", sans-serif;
+
+// custom color
+$body-color: rgb(1, 8, 9);
+$body-bg: rgb(232, 251, 252);
+$primary: rgb(14, 60, 123);
+$secondary: rgb(248, 196, 191);
+$accent: rgb(210, 133, 25);
+
+// import bootstrap
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+// custom class
+.card {
+  .card-header {
+    > ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: space-between;
+
+      > li:last-child {
+        display: flex;
+        align-items: center;
+        
+        h5 {
+          margin: 0;
+        }
+      }
+    }
+  }
+  .card-body {
+    li {
+      list-style: none;
+    }
+  }
+}

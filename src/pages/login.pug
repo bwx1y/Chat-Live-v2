@@ -1,0 +1,22 @@
+extends template 
+
+block main 
+    .row.d-flex.vh-100.justify-content-evenly.align-items-center
+      .col-md-8
+        .card
+          .card-header
+            h2 Login             
+          .card-body
+            form#login
+              .form-floating.mb-3
+                input#inputUsername.form-control(type='text', placeholder='Username')                
+                label(for='inputUsername') Username              
+              .form-floating.mb-3.d-none
+                input#inputRoom.form-control(type='text', placeholder='Room')                 
+                label(for='inputRoom') Room               
+              .row.w-100.d-flex.justify-content-evenly
+                .col-md-6
+                  button.btn.btn-primary.w-100(type='submit') Login                  
+                .col-md-6
+                  button#setRoom.btn.btn-outline-secondary.w-100.text-dark(type='button') Use Room
+    script(src="assets/js/login.js") 
