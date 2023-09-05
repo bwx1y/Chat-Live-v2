@@ -11867,6 +11867,71 @@ textarea.form-control-lg {
 }
 .card .card-body li {
   list-style: none;
+  display: flex;
+  margin: 10px 0;
+}
+.card .card-body li.text-center {
+  justify-content: center;
+}
+.card .card-body li.message {
+  justify-content: start;
+}
+.card .card-body li.message > div {
+  position: relative;
+  margin: 0;
+  max-width: 80%;
+  background-color: var(--bs-gray-500);
+  padding: 5px 10px;
+  border-radius: 1rem;
+}
+.card .card-body li.message > div h6, .card .card-body li.message > div .h6 {
+  font-weight: bold;
+  font-size: 18px;
+  margin: 0 0 4px;
+}
+.card .card-body li.message > div p {
+  margin: 0;
+  font-size: 14px;
+}
+.card .card-body li.message > div::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 100%;
+  left: -12px;
+  top: 16px;
+  border-top: 0.75rem solid transparent;
+  border-bottom: 0.75rem solid transparent;
+  border-right: 0.75rem solid var(--bs-gray-500);
+}
+.card .card-body li.mychat {
+  justify-content: end;
+}
+.card .card-body li.mychat > div {
+  position: relative;
+  margin: 0;
+  max-width: 80%;
+  background-color: var(--bs-gray-300);
+  padding: 13px 10px;
+  border-radius: 1rem;
+}
+.card .card-body li.mychat > div p {
+  margin: 0;
+  font-size: 14px;
+}
+.card .card-body li.mychat > div::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 100%;
+  left: 100%;
+  top: 10px;
+  border-top: 0.75rem solid transparent;
+  border-bottom: 0.75rem solid transparent;
+  border-right: 0.75rem solid transparent;
+  border-left: 0.75rem solid var(--bs-gray-300);
 }
 
 /*# sourceMappingURL=main.css.map */

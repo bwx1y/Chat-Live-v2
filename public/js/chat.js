@@ -29,23 +29,23 @@ socket.on("new_user", (res) => {
 });
 
 // socket get message
-socket.on("new_message", (res) => {
+socket.on("new_message", ({ username, message }) => {
   const data = JSON.parse(localStorage.getItem("data"));
 
   const li = document.createElement("li");
+  const div = document.createElement("div");
   const p = document.createElement("p");
-  const h5 = document.createElement("h5");
+  const h6 = document.createElement("h6");
 
-  li.classList.add(data.username === res.username ? "text-end" : "text-start");
-  li.classList.add("w-100");
-  p.classList.add("m-0");
+  h6.textContent = username;
+  p.textContent = message;
 
-  p.innerHTML = data.username === res.username ? "Me" : res.username;
-  h5.innerHTML = res.message;
+  if (username != data.username) div.append(h6);
 
-  li.append(p);
-  li.append(h5);
+  li.classList.add(username == data.username ? "mychat" : "message");
 
+  div.append(p);
+  li.append(div);
   document.querySelector(".card-body").append(li);
 });
 

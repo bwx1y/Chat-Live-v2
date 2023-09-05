@@ -27,7 +27,7 @@ $accent: rgb(210, 133, 25);
       > li:last-child {
         display: flex;
         align-items: center;
-        
+
         h5 {
           margin: 0;
         }
@@ -37,6 +37,79 @@ $accent: rgb(210, 133, 25);
   .card-body {
     li {
       list-style: none;
+      display: flex;
+      margin: 10px 0;
+    }
+    li.text-center {
+      justify-content: center;
+    }
+    li.message {
+      justify-content: start;
+
+      > div {
+        position: relative;
+        margin: 0;
+        max-width: 80%;
+
+        background-color: var(--bs-gray-500);
+        padding: 5px 10px;
+        border-radius: 1rem;
+
+        h6 {
+          font-weight: bold;
+          font-size: 18px;
+          margin: 0 0 4px;
+        }
+        p {
+          margin: 0;
+          font-size: 14px;
+        }
+      }
+
+      > div::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        bottom: 100%;
+        left: -12px;
+        top: 16px;
+        border-top: 0.75rem solid transparent;
+        border-bottom: 0.75rem solid transparent;
+        border-right: 0.75rem solid var(--bs-gray-500);
+      }
+    }
+    li.mychat {
+      justify-content: end;
+
+      > div {
+        position: relative;
+        margin: 0;
+        max-width: 80%;
+
+        background-color: var(--bs-gray-300);
+        padding: 13px 10px;
+        border-radius: 1rem;
+
+        p {
+          margin: 0;
+          font-size: 14px;
+        }
+      }
+
+      > div::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        bottom: 100%;
+        left: 100%;
+        top: 10px;
+        border-top: 0.75rem solid transparent;
+        border-bottom: 0.75rem solid transparent;
+        border-right: 0.75rem solid transparent;
+        border-left: 0.75rem solid var(--bs-gray-300);
+      }
     }
   }
 }
