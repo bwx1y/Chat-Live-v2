@@ -6,7 +6,7 @@ $font-family-base: "Montserrat", sans-serif;
 
 // custom color
 $body-color: rgb(1, 8, 9);
-$body-bg: rgb(232, 251, 252);
+// $body-bg: rgb(232, 251, 252);
 $primary: rgb(14, 60, 123);
 $secondary: rgb(248, 196, 191);
 $accent: rgb(210, 133, 25);
@@ -40,8 +40,21 @@ $accent: rgb(210, 133, 25);
       display: flex;
       margin: 10px 0;
     }
-    li.text-center {
+
+    li.login {
       justify-content: center;
+
+      > p {
+        width: 70%;
+        text-align: center;
+        background-color: var(--bs-gray-400);
+        border: 1px solid var(--bs-gray-400);
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+      }
     }
     li.message {
       justify-content: start;

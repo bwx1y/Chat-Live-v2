@@ -18,7 +18,7 @@ socket.on("new_user", (res) => {
   const li = document.createElement("li");
   const p = document.createElement("p");
 
-  li.classList.add("text-center");
+  li.classList.add("login");
   p.classList.add("my-1");
 
   if (res.username != data.username) {
